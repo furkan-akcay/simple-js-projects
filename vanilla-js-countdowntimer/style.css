@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+/* https://www.pexels.com/photo/forest-big-aerial-area-5065/ */
+
+* {
+    font-family: 'Roboto Mono', sans-serif;
+    text-align: center;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./pexels-jaymantri-5065.jpg') no-repeat center center;
+}
+
+.container {
+    margin-top: -15em;
+}
+
+.label {
+    font-size: 3em;
+    margin: 1em 0;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.countdown {
+    font-size: 5em;
+    margin: 0 1em;
+    font-weight: bold;
+}
+
+.countdown-label {
+    font-size: 1.2em;
+}

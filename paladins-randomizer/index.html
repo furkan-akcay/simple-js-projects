@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Paladns randomizer</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            .container {
+                margin: 3rem;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            td {
+                text-align: left;
+                padding: 8px;
+            }
+
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app" class="container">
+            <table>
+                <tr v-for="user in users">
+                    <td>{{user}}</td>
+                    <td>{{champions[Math.floor(Math.random()*champions.length)]}}</td>
+                </tr>
+            </table>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

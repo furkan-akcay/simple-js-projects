@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+* {
+    margin: 0;
+    padding-left: 0;
+    font-family: "Roboto Mono", sans-serif;
+
+    --red-100: #fee2e2;
+    --red-500: #ef4444;
+    --green-100: #d1fae5;
+    --green-500: #10b981;
+    --light-50: #f9fafb;
+    --light-100: #f3f4f6;
+    --light-200: #e5e7eb;
+    --dark: #1f2937;
+}
+
+body {
+    background-color: var(--light-50);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark);
+}
+
+.container {
+    width: 100%;
+}
+
+.number {
+    text-align: center;
+    font-size: 6rem;
+    padding-bottom: 2rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+button {
+    width: 100%;
+    padding: 0.5rem 1.5rem;
+    margin: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: var(--light-200);
+    cursor: pointer;
+}
+
+.decrease-button {
+    background-color: var(--red-500);
+    color: var(--light-50);
+
+    &:hover {
+        background-color: var(--red-100);
+        color: var(--red-500);
+    }
+}
+
+.increase-button {
+    background-color: var(--green-500);
+    color: var(--light-50);
+
+    &:hover {
+        background-color: var(--green-100);
+        color: var(--green-500);
+    }
+}
+
+.reset-button {
+    background-color: var(--light-200);
+    color: var(--dark);
+
+    &:hover {
+        background-color: var(--dark);
+        color: var(--light-200);
+    }
+}
+
+@media (min-width: 768px) {
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+        width: 50%;
+    }
+}

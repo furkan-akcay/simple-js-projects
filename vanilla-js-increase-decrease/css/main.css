@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding-left: 0;
+  font-family: "Roboto Mono", sans-serif;
+  --red-100: #fee2e2;
+  --red-500: #ef4444;
+  --green-100: #d1fae5;
+  --green-500: #10b981;
+  --light-50: #f9fafb;
+  --light-100: #f3f4f6;
+  --light-200: #e5e7eb;
+  --dark: #1f2937;
+}
+
+body {
+  background-color: var(--light-50);
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--dark);
+}
+
+.container {
+  width: 100%;
+}
+
+.number {
+  text-align: center;
+  font-size: 6rem;
+  padding-bottom: 2rem;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  margin: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: var(--light-200);
+  cursor: pointer;
+}
+
+.decrease-button {
+  background-color: var(--red-500);
+  color: var(--light-50);
+}
+
+.decrease-button:hover {
+  background-color: var(--red-100);
+  color: var(--red-500);
+}
+
+.increase-button {
+  background-color: var(--green-500);
+  color: var(--light-50);
+}
+
+.increase-button:hover {
+  background-color: var(--green-100);
+  color: var(--green-500);
+}
+
+.reset-button {
+  background-color: var(--light-200);
+  color: var(--dark);
+}
+
+.reset-button:hover {
+  background-color: var(--dark);
+  color: var(--light-200);
+}
+
+@media (min-width: 768px) {
+  .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: auto;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

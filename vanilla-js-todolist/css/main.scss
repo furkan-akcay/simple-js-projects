@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+    --primary-color: #112d4e;
+    --secondary-color: #3f72af;
+    --primary-background-color: #dbe2ef;
+    --secondary-background-color: #f9f7f7;
+
+    --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+body {
+    background-color: var(--primary-background-color);
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--primary-color);
+}
+
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    padding-top: 2em;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+form {
+    input {
+        width: 30%;
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    input,
+    button,
+    select {
+        padding: 0.8rem;
+        font-size: 1rem;
+        border: none;
+        background-color: var(--secondary-background-color);
+        box-shadow: var(--shadow);
+    }
+
+    button {
+        background: var(--secondary-color);
+        color: var(--secondary-background-color);
+        cursor: pointer;
+        transition: all 0.3 ease;
+        border-radius: 0 0.5rem 0.5rem 0;
+
+        &:hover {
+            background: var(--secondary-background-color-color);
+            color: var(--secondary-color);
+            border: var(--secondary-color) solid 1px;
+        }
+    }
+
+    select {
+        appearance: none;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    .filter {
+        position: relative;
+        overflow: hidden;
+        margin-left: 0.5rem;
+        width: 13%;
+        border-radius: 0.5rem;
+        box-shadow: var(--shadow);
+
+        &:hover:after {
+            background: var(--secondary-background-color);
+            color: var(--primary-color);
+        }
+        &:after {
+            content: "\25BC";
+            position: absolute;
+            background: var(--primary-color);
+            color: var(--secondary-background-color);
+            top: 0;
+            right: 0;
+            padding: 0.8rem;
+            pointer-events: none;
+        }
+    }
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    width: 45%;
+    list-style: none;
+    padding: 0;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: var(--secondary-background-color);
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    border-left: var(--secondary-color) solid 8px;
+
+    li {
+        // .todo-item
+        flex: 1;
+        padding: 0 1rem;
+    }
+}
+
+.trash-btn,
+.complete-btn {
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.complete-btn {
+    background: var(--secondary-color);
+    color: var(--secondary-background-color);
+
+    &:hover {
+        background: var(--secondary-background-color);
+        color: var(--secondary-color);
+    }
+}
+
+.trash-btn {
+    background: var(--primary-color);
+    color: var(--secondary-background-color);
+    border-radius: 0 0.5rem 0.5rem 0;
+
+    &:hover {
+        background: var(--secondary-background-color);
+        color: var(--primary-color);
+    }
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem);
+    opacity: 0;
+}
+
+.hidden {
+    display: none;
+}

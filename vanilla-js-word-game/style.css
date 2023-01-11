@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: lightblue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.words {
+    height: 100%;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.word {
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.word>a {
+    text-decoration: none;
+    color: black;
+}
+
+@media (min-width: 640px) {
+    .word {
+        width: auto;
+    }
+}

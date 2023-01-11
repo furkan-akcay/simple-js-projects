@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+* {
+  --primary-color: #112d4e;
+  --secondary-color: #3f72af;
+  --primary-background-color: #dbe2ef;
+  --secondary-background-color: #f9f7f7;
+  --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background-color: var(--primary-background-color);
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: var(--primary-color);
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header {
+  padding-top: 2em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+form input {
+  width: 30%;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+form input,
+form button,
+form select {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  background-color: var(--secondary-background-color);
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+}
+
+form button {
+  background: var(--secondary-color);
+  color: var(--secondary-background-color);
+  cursor: pointer;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+form button:hover {
+  background: var(--secondary-background-color-color);
+  color: var(--secondary-color);
+  border: var(--secondary-color) solid 1px;
+}
+
+form select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+form .filter {
+  position: relative;
+  overflow: hidden;
+  margin-left: 0.5rem;
+  width: 13%;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+}
+
+form .filter:hover:after {
+  background: var(--secondary-background-color);
+  color: var(--primary-color);
+}
+
+form .filter:after {
+  content: "\25BC";
+  position: absolute;
+  background: var(--primary-color);
+  color: var(--secondary-background-color);
+  top: 0;
+  right: 0;
+  padding: 0.8rem;
+  pointer-events: none;
+}
+
+.todo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo-list {
+  width: 45%;
+  list-style: none;
+  padding: 0;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: var(--secondary-background-color);
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  border-left: var(--secondary-color) solid 8px;
+}
+
+.todo li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 1rem;
+}
+
+.trash-btn,
+.complete-btn {
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+}
+
+.complete-btn {
+  background: var(--secondary-color);
+  color: var(--secondary-background-color);
+}
+
+.complete-btn:hover {
+  background: var(--secondary-background-color);
+  color: var(--secondary-color);
+}
+
+.trash-btn {
+  background: var(--primary-color);
+  color: var(--secondary-background-color);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.trash-btn:hover {
+  background: var(--secondary-background-color);
+  color: var(--primary-color);
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  -webkit-transform: translateY(8rem);
+          transform: translateY(8rem);
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+/*# sourceMappingURL=main.css.map */
